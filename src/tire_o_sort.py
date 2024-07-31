@@ -46,6 +46,7 @@ class ApplicationTirageAuSort:
         self.label.pack(expand=True)
         
         self.bouton_selection = tk.Button(self.master, text="Sélectionner le fichier CSV", command=self.selectionner_fichier)
+        self.adjust_font_size(self.bouton_selection, 12)
         self.bouton_selection.pack(pady=20)
         
         self.participants = []
@@ -132,6 +133,20 @@ class ApplicationTirageAuSort:
         time.sleep(2)
         gagnant = tirage_au_sort(self.participants)
         self.label.config(text=f"Le gagnant est :\n{gagnant}", fg="green")
+
+    def adjust_font_size(self, widget, base_size):
+        
+        # On récupére l'écran 
+        monitors = get_monitors()
+        if self.screen_number <= len(monitors):
+            screen = monitors[self.screen_number - 1]
+            screen_height = screen.height
+        
+        # calcul du ratio par rapport au FullHD
+        scale_factor = screen_height / 1080 
+
+        new_size = int(base_size * scale_factor)
+        widget.config(font=("Arial", new_size))
 
 def main():
     parser = argparse.ArgumentParser(description="Application de tirage au sort")
