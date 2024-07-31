@@ -50,7 +50,7 @@ Dans l'ordre :
 1. Téléchargez Python ici : [page officielle](https://www.python.org/downloads/)
 2. Installez Python _(comme vous le pouvez)_
 3. Téléchargez à minima `tire_o_sort.py` et `requirements.txt`.
-4. Lancez la commande `pip install -r requirements.txt` pour installer les bibliothèque nécessaire. Si ça vous paret trop compliqué : double-clic sur `install.bat` _(Windows uniquement)_
+4. Lancez la commande `pip install -r requirements.txt` pour installer les bibliothèque nécessaire. Si ça vous parait trop compliqué : double-clic sur `install.bat` _(Windows uniquement)_
 5. Lancer le script comme expliqué dans la section précédente
 
 
